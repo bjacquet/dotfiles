@@ -1,0 +1,10 @@
+[alias]
+	recent = !git for-each-ref --sort=-committerdate refs/heads --format='%(HEAD)%(color:yellow)%(refname:short)|%(color:bold green)%(committerdate:relative)|%(color:blue)%(subject)|%(color:magenta)%(authorname)%(color:reset)'|column -ts'|'
+[user]
+	name = Bruno Jacquet
+	email = bruno.jacquet@gmail.com
+[core]
+	autocrlf = input
+[github]
+	user = bjacquet
+	token = 6c5a50f81cc2659a37d786c8628157e9
