@@ -79,8 +79,8 @@ declare -a FILES_TO_SYMLINK=(
 
 # Move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks from the homedir to any files in the ~/dotfiles directory specified in $files
 
+echo "Moving any existing dotfiles from ~ to $dir_backup"
 for i in ${FILES_TO_SYMLINK[@]}; do
-  echo "Moving any existing dotfiles from ~ to $dir_backup"
   mv ~/.${i##*/} ${dir_backup}
 done
 
@@ -118,3 +118,5 @@ main() {
 
   unset FILES_TO_SYMLINK
 }
+
+main
