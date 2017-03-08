@@ -1,0 +1,4 @@
+*.lisp diff=lisp
+*.cl   diff=lisp
+*.el   diff=lisp
+*.bil  diff=lisp
