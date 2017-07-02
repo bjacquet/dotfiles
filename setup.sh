@@ -1,5 +1,7 @@
 # -*- mode: shell-script -*-
 
+echo $SHELL
+
 #
 # Utils
 #
@@ -52,7 +54,6 @@ print_success() {
 }
 
 
-
 dir=~/dotfiles                        # dotfiles directory
 dir_backup=~/dotfiles_old             # old dotfiles backup directory
 
@@ -63,7 +64,7 @@ mkdir -p $dir_backup
 echo "done"
 
 
-declare -a FILES_TO_SYMLINK=(
+declare -A FILES_TO_SYMLINK=(
 
   'shell/alias'
   'shell/bash_profile'
@@ -81,7 +82,9 @@ declare -a FILES_TO_SYMLINK=(
 
 echo "Moving any existing dotfiles from ~ to $dir_backup"
 for i in ${FILES_TO_SYMLINK[@]}; do
-  mv ~/.${i##*/} ${dir_backup}
+    if [ -e ~/.${i##*/} ]; then
+        mv ~/.${i##*/} ${dir_backup}
+    fi
 done
 
 
@@ -101,7 +104,9 @@ main() {
     targetFile="$HOME/.$(printf "%s" "$i" | sed "s/.*\/\(.*\)/\1/g")"
 
     if [ ! -e "$targetFile" ]; then
-      execute "ln -fs $sourceFile $targetFile" "$targetFile → $sourceFile"
+        echo "antes"
+        execute "ln -fs $sourceFile $targetFile" "$targetFile → $sourceFile"
+        echo "depois"
     elif [ "$(readlink "$targetFile")" == "$sourceFile" ]; then
       print_success "$targetFile → $sourceFile"
     else
