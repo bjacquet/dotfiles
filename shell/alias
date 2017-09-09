@@ -16,3 +16,11 @@ alias xterm='xterm -r'
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+# MacOS workaround
+if [[ $(uname) == "Darwin" ]]; then
+    emc='/Applications/Emacs.app/Contents/MacOS/Emacs'
+    alias emacs='${emc} &'
+    alias emacs-org='${emc} -g 60x24 --font="DejaVu Sans Mono-16" --find-file ~/Dropbox/Documents/Orgzly/Anotations.org &'
+    alias emacs-vanilla='${emc} --no-init-file &'
+fi
