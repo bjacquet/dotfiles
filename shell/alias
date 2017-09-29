@@ -19,8 +19,7 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 # MacOS workaround
 if [[ $(uname) == "Darwin" ]]; then
-    emc='/Applications/Emacs.app/Contents/MacOS/Emacs'
-    alias emacs='${emc} &'
-    alias emacs-org='${emc} -g 60x24 --font="DejaVu Sans Mono-16" --find-file ~/Dropbox/Documents/Orgzly/Anotations.org &'
-    alias emacs-vanilla='${emc} --no-init-file &'
+    alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs'
+    alias emacs-org='emacs -g 60x24 --find-file ~/Dropbox/Documents/Orgzly/Anotations.org'
+    alias emacs-vanilla='emacs --no-init-file'
 fi
