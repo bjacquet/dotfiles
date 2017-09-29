@@ -13,4 +13,4 @@ fi
 
 # Customize to your needs...
 
-. dotfiles/shell/alias
+. ~/dotfiles/shell/alias
