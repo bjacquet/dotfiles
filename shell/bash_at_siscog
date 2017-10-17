@@ -20,8 +20,8 @@ PROMPT_COMMAND='echo -ne "\033]0;${PWD}\007"'
 
 # Launch Windows applications
 alias explorer='c:/Windows/SysWOW64/explorer.exe . &'
-alias emacs='d:/tmp/Emacs/bin/runemacs.exe'
-alias emacs_sc='d:/tmp/Emacs/bin/runemacs.exe -l y:/.emacs.d/dotemacs/siscog.el'
+alias emacs='d:/tmp/Emacs/bin/runemacs.exe -q'
+alias emacs_sc='d:/tmp/Emacs/bin/runemacs.exe -q -l y:/.emacs.d/dotemacs/siscog.el'
 alias ff='d:/tmp/Firefox/firefox.exe &'
 
 alias ls='ls -G'
