@@ -6,7 +6,7 @@
         unstage = reset HEAD --
 [user]
 	name = Bruno Jacquet
-	email = bruno.jacquet@gmail.com
+	email = brunjact@protonmail.com
 [core]
 	attributesfile = ~/.gitattributes
 	autocrlf = input
