@@ -87,7 +87,7 @@ if ! shopt -oq posix; then
 fi
 
 
-. dotfiles/shell/alias
+. .dotfiles/shell/alias
 
 
 # Things from OS X's .bash_profile that I don't remeber

@@ -54,8 +54,8 @@ print_success() {
 }
 
 
-dir=~/dotfiles                        # dotfiles directory
-dir_backup=~/dotfiles_old             # old dotfiles backup directory
+dir=~/.dotfiles                       # dotfiles directory
+dir_backup=~/.dotfiles_old            # old dotfiles backup directory
 
 
 # Create dotfiles_old in homedir
@@ -78,7 +78,7 @@ declare -A FILES_TO_SYMLINK=(
 
 # FILES_TO_SYMLINK="$FILES_TO_SYMLINK .vim bin" # add in vim and the binaries
 
-# Move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks from the homedir to any files in the ~/dotfiles directory specified in $files
+# Move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks from the homedir to any files in the ~/.dotfiles directory specified in $files
 
 echo "Moving any existing dotfiles from ~ to $dir_backup"
 for i in ${FILES_TO_SYMLINK[@]}; do
