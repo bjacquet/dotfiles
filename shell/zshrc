@@ -13,4 +13,13 @@ fi
 
 # Customize to your needs...
 
-. ~/dotfiles/shell/alias
+. ~/.dotfiles/shell/alias
+
+
+# Suggested by Exercism
+export PATH=$HOME/Applications:$PATH
+
+# Exercism CLI completion
+if [ -f ~/.config/exercism/exercism_completion.zsh ]; then
+  . ~/.config/exercism/exercism_completion.zsh
+fi
