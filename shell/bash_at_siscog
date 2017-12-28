@@ -9,8 +9,8 @@
 export LS_COLORS="${LS_COLORS}ex=00:"
 
 # my fancy prompt
-PS1="\[\033[0m\[\033[34;1m\w\033[0m\n\$ "
-PROMPT_COMMAND='echo -ne "\033]0;${PWD}\007"'
+# PS1="\[\033[0m\[\033[34;1m\w\033[0m\n\$ "
+# PROMPT_COMMAND='echo -ne "\033]0;${PWD}\007"'
 
 # cygwin suff
 # ln -s /cygdrive/u /u
@@ -22,10 +22,10 @@ PROMPT_COMMAND='echo -ne "\033]0;${PWD}\007"'
 alias explorer='c:/Windows/SysWOW64/explorer.exe . &'
 alias emacs='d:/tmp/Emacs/bin/runemacs.exe -q'
 alias emacs_sc='d:/tmp/Emacs/bin/runemacs.exe -q -l y:/.emacs.d/dotemacs/siscog.el'
-alias ff='d:/tmp/Firefox/firefox.exe &'
+alias ff='d:/tmp/Firefox/firefox.exe '
+alias msword='c:/Program\ Files/Microsoft\ Office\ 15/root/office15/winword.exe'
 
 alias ls='ls -G'
 alias ll='ls -l'
 alias la='ls -A'
 alias lla='la -l'
-
