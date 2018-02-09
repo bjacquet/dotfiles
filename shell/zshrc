@@ -23,3 +23,15 @@ export PATH=$HOME/Applications:$PATH
 if [ -f ~/.config/exercism/exercism_completion.zsh ]; then
   . ~/.config/exercism/exercism_completion.zsh
 fi
+
+# Because of Homebrew
+if [[ $(uname) == "Darwin" ]] && [[ -d /usr/local/bin ]]; then
+  export PATH=":$PATH:/usr/local/bin"
+fi
+
+# Because of Homebrew at Runtime Revolution
+if [[ $(uname) == "Darwin" ]] && [[ -d ~/.rvm ]]; then
+  # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+  source ~/.rvm/scripts/rvm
+  export PATH="$PATH:$HOME/.rvm/bin"
+fi
