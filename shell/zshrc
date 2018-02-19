@@ -26,7 +26,7 @@ fi
 
 # Because of Homebrew
 if [[ $(uname) == "Darwin" ]] && [[ -d /usr/local/bin ]]; then
-  export PATH=":$PATH:/usr/local/bin"
+  export PATH="/usr/local/bin:$PATH"
 fi
 
 # Because of Homebrew at Runtime Revolution
