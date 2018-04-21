@@ -1,8 +1,9 @@
 [alias]
         branch-age = !~/git-branch-age
-	recent = !git for-each-ref --sort=-committerdate refs/heads --format='%(HEAD)%(color:yellow)%(refname:short)|%(color:bold green)%(committerdate:relative)|%(color:blue)%(subject)|%(color:magenta)%(authorname)%(color:reset)'|column -ts'|'
+        recent = !git for-each-ref --sort=-committerdate refs/heads --format='%(HEAD)%(refname:short)|%(committerdate:relative)|%(subject)|%(authorname)'|column -ts'|'
+        precent = for-each-ref --sort=-committerdate refs/heads --format='%(HEAD)%(color:yellow)%(refname:short) %(color:bold green)%(committerdate:relative) %(color:magenta)%(authorname)%0a%(color:blue)%(subject)%(color:reset)'
         st = status --branch --short
-        wat = log --graph --decorate --oneline -7
+        latest = log --graph --decorate --oneline -7
         unstage = reset HEAD --
 [user]
 	name = Bruno Jacquet
@@ -15,3 +16,5 @@
 	token = 6c5a50f81cc2659a37d786c8628157e9
 [diff "lisp"]
 	xfuncname="^;;;([A-Z][-A-Z0-9\\. \\(\\)]+)$"
+[color]
+	ui = auto
