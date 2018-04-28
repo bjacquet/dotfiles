@@ -14,7 +14,7 @@ fi
 # Customize to your needs...
 
 . ~/.dotfiles/shell/alias
-
+. ~/.dotfiles/shell/functions/zsh
 
 # Suggested by Exercism
 export PATH=$HOME/Applications:$PATH

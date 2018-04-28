@@ -1,0 +1,4 @@
+# -*- mode: shell-script -*-
+
+fpath=(~/.dotfiles/shell/functions $fpath)
+autoload git-rebase-master
