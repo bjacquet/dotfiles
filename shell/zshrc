@@ -35,3 +35,6 @@ if [[ $(uname) == "Darwin" ]] && [[ -d ~/.rvm ]]; then
   source ~/.rvm/scripts/rvm
   export PATH="$PATH:$HOME/.rvm/bin"
 fi
+
+# Because I can't get the handle of VIM
+export EDITOR=emacs
