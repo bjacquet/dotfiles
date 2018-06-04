@@ -18,10 +18,7 @@ alias xterm='xterm -r'
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 # MacOS workaround
-if [[ $(uname) == "Darwin" ]]; then
-    alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs'
-  if [[ $(uname -n) == "puffin.lan" ]]; then
-    alias emacs-org='emacs -g 60x24 --find-file ~/Dropbox/Documents/Orgzly/Anotations.org'
-    alias emacs-vanilla='emacs --no-init-file'
-  fi
+if [[ $(uname -n) == "puffin.lan" ]]; then
+  alias emacs-org='emacs -g 60x24 --find-file ~/Dropbox/Documents/Orgzly/Anotations.org'
+  alias emacs-vanilla='emacs --no-init-file'
 fi
