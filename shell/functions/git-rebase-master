@@ -1,11 +1,17 @@
+#!/bin/bash
 # -*- mode: shell-script -*-
 
 # Get the latest changes on master pulled down locally
 # and then rebase them into/onto the current branch
 git-rebase-master() {
-  CURRENT=`git rev-parse --abbrev-ref HEAD` # figures out the current branch
-  git checkout master
+  if [[ -n "$1" ]]; then
+    branch="$1"
+  else
+    branch="master"
+  fi
+  CURRENT=$(git rev-parse --abbrev-ref HEAD) # figures out the current branch
+  git checkout "$branch"
   git pull
-  git checkout $CURRENT
-  git rebase master
+  git checkout "$CURRENT"
+  git rebase "$branch"
 }
