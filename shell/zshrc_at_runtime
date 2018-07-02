@@ -1,0 +1,16 @@
+# -*- mode: shell-script -*-
+
+. ~/.dotfiles/shell/zshrc
+
+# Alias
+alias ber='bundle exec rails'
+
+# Because of Homebrew at Runtime Revolution
+if [[ $(uname) == "Darwin" ]] && [[ -d ~/.rvm ]]; then
+  # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+  source ~/.rvm/scripts/rvm
+  export PATH="$PATH:$HOME/.rvm/bin"
+fi
+
+# Auto switch the Ruby version on directory change.
+zstyle ':prezto:module:ruby:chruby' auto-switch 'yes'

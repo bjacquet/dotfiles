@@ -28,13 +28,3 @@ fi
 if [[ $(uname) == "Darwin" ]] && [[ -d /usr/local/bin ]]; then
   export PATH="/usr/local/bin:$PATH"
 fi
-
-# Because of Homebrew at Runtime Revolution
-if [[ $(uname) == "Darwin" ]] && [[ -d ~/.rvm ]]; then
-  # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-  source ~/.rvm/scripts/rvm
-  export PATH="$PATH:$HOME/.rvm/bin"
-fi
-
-# Because I can't get the handle of VIM
-export EDITOR=emacs
