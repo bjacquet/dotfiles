@@ -370,7 +370,7 @@
 	<key>Default Bookmark Guid</key>
 	<string>21C9785E-42F4-4FCA-B3C1-89365DED1168</string>
 	<key>FocusFollowsMouse</key>
-	<true/>
+	<false/>
 	<key>HideActivityIndicator</key>
 	<false/>
 	<key>HideTab</key>
