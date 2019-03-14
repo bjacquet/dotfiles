@@ -3,7 +3,8 @@
 . ~/.dotfiles/shell/zshrc
 
 # Alias
-alias ber='bundle exec rails'
+alias berails='bundle exec rails'
+alias berspec='bundle exec rspec'
 alias knowledge_base='npm run docs:dev --prefix ~/Documents/Knowledge_Base'
 
 # Because of Homebrew at Runtime Revolution
