@@ -8,7 +8,7 @@
         rbb = "!f() { git rebase -i HEAD~$1; }; f"
         done = "!f() { git branch | grep \"*\" | cut -c 3- | xargs -I{} git branch -m {} done-{}; }; f"
         undone = "!f() { git branch | grep \"*\" | cut -c 8- | xargs -I {} git branch -m done-{} {}; }; f"
-        rudi = "!f() { git diff develop --name-only | sed 's/^db.*$//' | xargs rubocop {}; }; f"
+        rudi = "!f() { git diff develop --name-only | sed 's/^db\\/schema\\.rb$//' | xargs rubocop {}; }; f"
         pushit = "!f() { git branch | grep \"*\" | cut -c 3- | xargs -I{} git push -u origin {}; }; f"
 [user]
 	name = Bruno Jacquet
