@@ -1,0 +1,15 @@
+#!/bin/bash
+# -*- mode: shell-script -*-
+
+set -eux
+set -o pipe-fail
+
+CURRENT=$(git rev-parse --abbrev-ref HEAD)
+
+git-set-state() {
+  if [[ -n "$1" ]]; then
+    state="$1"
+  else
+    state=""
+  fi
+}

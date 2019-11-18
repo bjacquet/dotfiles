@@ -475,7 +475,7 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>-1503 490 1018 447 -1920 0 1920 1058 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>-1920 -75 1920 1057 -1920 -75 1920 1057 </string>
+	<string>1440 24 1920 1033 1440 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>-1907 589 650 450 -1920 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -1088,6 +1088,15 @@
 				<real>0.15575926005840302</real>
 				<key>Red Component</key>
 				<real>0.0</real>
+			</dict>
+			<key>Semantic History</key>
+			<dict>
+				<key>action</key>
+				<string>best editor</string>
+				<key>editor</key>
+				<string>com.github.atom</string>
+				<key>text</key>
+				<string></string>
 			</dict>
 			<key>Send Code When Idle</key>
 			<false/>
@@ -1794,7 +1803,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>Menlo-Regular 13</string>
+			<string>Sudo-Regular 17</string>
 			<key>Only The Default BG Color Uses Transparency</key>
 			<false/>
 			<key>Option Key Sends</key>
@@ -1901,14 +1910,14 @@
 	</array>
 	<key>NoSyncBFPRecents</key>
 	<array>
-		<string>Menlo</string>
+		<string>Sudo</string>
 	</array>
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
 		<key>screenFrame</key>
-		<string>{{-1920, -75}, {1920, 1080}}</string>
+		<string>{{1440, 0}, {1920, 1080}}</string>
 		<key>topLeft</key>
-		<string>{-1684, 656}</string>
+		<string>{1689, 757}</string>
 	</dict>
 	<key>NoSyncHaveUsedCopyMode</key>
 	<true/>
@@ -1921,7 +1930,7 @@
 	<key>NoSyncLastTipTime</key>
 	<real>590403869.06539404</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>42</integer>
+	<integer>69</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -2651,6 +2660,13 @@
 	</array>
 	<key>NoSyncSearchHistory2</key>
 	<array>
+		<string>api/app</string>
+		<string>toy</string>
+		<string>exit</string>
+		<string>note</string>
+		<string>bruno</string>
+		<string>app</string>
+		<string>poli</string>
 		<string>prescription</string>
 		<string>pree</string>
 	</array>
