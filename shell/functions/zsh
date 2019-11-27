@@ -2,5 +2,5 @@
 
 fpath=(~/.dotfiles/shell/functions $fpath)
 autoload git-rebase-master
-autoload rubi
+autoload rudi
 autoload git-delete-done

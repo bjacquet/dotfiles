@@ -1,0 +1,50 @@
+#!/bin/zsh
+# -*- mode: shell-script -*-
+
+# TODO: set safety flags, like in bash
+# set -eux
+
+# Customizable Settings
+: ${APP_NAME:=mixlab-api-staging}
+: ${TARGET_DB:=api_development}
+: ${DEFAULT_BRANCH:=develop}
+
+# Settings
+CURRENT_BRANCH=''
+
+
+bj-set-current-branch() {
+  CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+}
+
+
+bj-got-git() {
+    if [[ -d .git ]]; then
+        return 1
+    else
+        print Not a Git repository
+        return 0
+    fi
+}
+
+# Get the latest changes on master pulled down locally
+# and then rebase them into/onto the current branch
+bj-git-rebase() {
+    if bj-got-git; then
+        return
+    fi
+
+  # TODO continue from here on
+  bj-set-current-branch
+
+  if [[ -n "$1" ]]; then
+    branch="$1"
+  else
+    branch=${DEFAULT_BRANCH}
+  fi
+
+  git checkout ${branch}
+  git pull
+  git checkout ${CURREN_BRANCH}
+  git rebase ${branch}
+}

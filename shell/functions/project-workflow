@@ -1,0 +1,25 @@
+#!/bin/bash
+# -*- mode: shell-script -*-
+
+set -eux
+set -o pipefail
+
+: ${APP_NAME:=mixlab-api}
+: ${TARGET_DB:=api_development}
+: ${DEFAULT_BRANCH:=develop}
+
+reset_database() {
+    mkdir -p tmp
+
+    curl -o tmp/latest.backup $(heroku pg:backups:url --app ${APP_NAME}) # download the backup from remote app
+    dropdb --if-exists ${TARGET_DB} && createdb ${TARGET_DB}
+
+    # restore from backup
+    pg_restore tmp/latest.backup --clean --no-owner --dbname ${TARGET_DB} --jobs=2
+
+    # delete rails production environment settings
+    psql ${TARGET_DB} -c "CREATE TABLE IF NOT EXISTS public.ar_internal_metadata (key character varying NOT NULL, value character varying, created_at timestamp without time zone NOT NULL, updated_at timestamp without time zone NOT NULL, CONSTRAINT ar_internal_metadata_pkey PRIMARY KEY (key)); UPDATE ar_internal_metadata SET value = 'development' WHERE key = 'environment'"
+
+    bundle exec rails db:migrate
+    rm tmp/latest.backup
+}

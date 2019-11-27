@@ -2,6 +2,10 @@
 
 . ~/.dotfiles/shell/zshrc
 
+# TODO working on this
+. ~/.dotfiles/shell/functions/project-manager
+
+
 # Alias
 alias berails='bundle exec rails'
 alias berspec='bundle exec rspec'
