@@ -12,16 +12,14 @@ alias berspec='bundle exec rspec'
 alias knowledge_base='npm run docs:dev --prefix ~/Documents/Knowledge_Base'
 alias emacs_rtrv='emacs -l ~/.emacs.d/dotemacs/rtrv.el'
 
-# Because of Homebrew at Runtime Revolution
-if [[ $(uname) == "Darwin" ]] && [[ -d ~/.rvm ]]; then
-  # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-  source ~/.rvm/scripts/rvm
-  export PATH="$PATH:$HOME/.rvm/bin"
-fi
+
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
 
 # Auto switch the Ruby version on directory change.
-zstyle ':prezto:module:ruby:chruby' auto-switch 'yes'
+# zstyle ':prezto:module:ruby:chruby' auto-switch 'yes'
+# This doesn't work for me. Don't know why.
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
+# This is a workaround.
+source ~/.rvm/scripts/rvm
