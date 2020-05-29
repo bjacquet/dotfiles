@@ -11,6 +11,8 @@ alias berails='bundle exec rails'
 alias berspec='bundle exec rspec'
 alias knowledge_base='npm run docs:dev --prefix ~/Documents/Knowledge_Base'
 alias emacs_rtrv='emacs -l ~/.emacs.d/dotemacs/rtrv.el'
+alias jrnl_yesterday='jrnl -from="yesterday" -until="yesterday"'
+alias jrnl_today='jrnl -from="today"'
 
 
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
