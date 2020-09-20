@@ -24,3 +24,5 @@
 	xfuncname="^;;;([A-Z][-A-Z0-9\\. \\(\\)]+)$"
 [color]
 	ui = auto
+[pull]
+	rebase = false
