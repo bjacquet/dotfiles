@@ -28,3 +28,6 @@ fi
 if [[ $(uname) == "Darwin" ]] && [[ -d /usr/local/bin ]]; then
   export PATH="/usr/local/bin:$PATH"
 fi
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"

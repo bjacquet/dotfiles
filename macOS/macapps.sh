@@ -114,32 +114,29 @@ installApp() {
 ###############################
 #    Install selected apps    #
 ###############################
-# installApp "dmg" "Basecamp"    "Basecamp 3.app"     "https://bc3-desktop.s3.amazonaws.com/mac/basecamp3.dmg" "" "" ""
 # installApp "dmg" "Firefox"     "Firefox.app"        "http://download.mozilla.org/?product=firefox-latest&os=osx&lang=en-UK" "" "" ""
-# installApp "dmg" "GIMP"        "GIMP.app"           "http://download.gimp.org/mirror/pub/gimp/v2.8/osx/gimp-2.8.22-x86_64.dmg" "" "" ""
 # installApp "dmg" "Slack"       "Slack.app"          "https://slack.com/ssb/download-osx" "" "" ""
 # installApp "dmg" "Skype"       "Skype.app"          "http://www.skype.com/go/getskype-macosx.dmg" "" "" ""
-# installApp "dmg" "Sync"        "Resilio Sync.app"   "https://download-cdn.resilio.com/stable/osx/Resilio-Sync.dmg" "" "" ""
 # installApp "dmg" "Thunderbird" "Thunderbird.app"    "http://download.mozilla.org/?product=thunderbird-latest&os=osx&lang=en-UK" "" "" ""
-# installApp "dmg" "TorBrowser"  "TorBrowser.app"     "https://www.torproject.org/dist/torbrowser/7.0.11/TorBrowser-7.0.11-osx64_en-UK.dmg" "" "" ""
-# installApp "dmg" "VLC"         "VLC.app"            "http://get.videolan.org/vlc/2.2.8/macosx/vlc-2.2.8.dmg" "" "" ""
 # installApp "dmg" "WhatsApp"    "WhatsApp.app"       "https://web.whatsapp.com/desktop/mac/files/WhatsApp.dmg" "" "" ""
 # installApp "zip" "Amethyst"    "Amethyst.app"       "http://ianyh.com/amethyst/versions/Amethyst-latest.zip" "" "" ""
 # installApp "zip" "Flux"        "Flux.app"           "https://justgetflux.com/mac/Flux.zip" "" "" "build"
-# installApp "zip" "GitHub"      "GitHub Desktop.app" "https://central.github.com/deployments/desktop/desktop/latest/darwin" "" "" ""
 # installApp "zip" "OpenEmu"     "OpenEmu.app"        "https://github.com/OpenEmu/OpenEmu/releases/download/v2.0.6.1/OpenEmu_2.0.6.1.zip" "" "" "build"
-# installApp "zip" "Spectacle"   "Spectacle.app"      "https://s3.amazonaws.com/spectacle/downloads/Spectacle+1.2.zip" "" "" ""
 # installApp "zip" "iTerm2"      "iTerm.app"          "https://iterm2.com/downloads/stable/latest" "" "" ""
 
-# For home use only
-# installApp "dmg" "LibreOffice"  "LibreOffice.app"  "http://download.documentfoundation.org/libreoffice/stable/6.0.0/mac/x86_64/LibreOffice_6.0.0_MacOS_x86-64.dmg" "" "" ""
-# installApp "dmg" "Transmission" "Transmission.app" "https://github.com/transmission/transmission-releases/raw/master/Transmission-2.92.dmg" "" "" ""
-# installApp "dmg" "Tunnelblick"  "Tunnelblick.app"  "https://tunnelblick.net/release/Tunnelblick_3.7.5beta05_build_4980.dmg" "" "" ""
-# installApp "dmg" "KeePassX"     "KeePassX.app"     "http://www.keepassx.org/releases/2.0.3/KeePassX-2.0.3.dmg" "" "" ""
+# installApp "dmg" "KeePassXC"    "KeePassXC.app"    "https://github.com/keepassxreboot/keepassxc/releases/download/2.6.1/KeePassXC-2.6.1.dmg" "" "" ""
 # installApp "zip" "OpenEmu"      "OpenEmu.app"      "https://github.com/OpenEmu/OpenEmu/releases/download/v2.0.6.1/OpenEmu_2.0.6.1.zip" "" "" "build"
 # installApp "dmg" "Steam"        "Steam.app"        "http://media.steampowered.com/client/installer/steam.dmg" "" "" "build"
+# installApp "zip" "Chromium"     "Chromium.app"     "https://download-chromium.appspot.com/dl/Mac" "chrome-mac/" "" ""
+# installApp "dmg" "TorBrowser"   "TorBrowser.app"   "https://www.torproject.org/dist/torbrowser/8.0.4/TorBrowser-8.0.4-osx64_en-US.dmg" "" "" ""
+# installApp "dmg" "LibreOffice"  "LibreOffice.app"  "http://download.documentfoundation.org/libreoffice/stable/7.0.1/mac/x86_64/LibreOffice_7.0.1_MacOS_x86-64.dmg" "" "" ""
 
-
+# installApp "dmg" "Transmission" "Transmission.app" "https://github.com/transmission/transmission-releases/raw/master/Transmission-2.92.dmg" "" "" ""
+# installApp "dmg" "VLC"          "VLC.app"          "http://get.videolan.org/vlc/3.0.11.1/macosx/vlc-3.0.11.1.dmg" "" "" ""
+# installApp "dmg" "GIMP"         "Gimp-2.10.app"    "http://download.gimp.org/mirror/pub/gimp/v2.10/osx/gimp-2.10.14-x86_64-1.dmg" "" "" ""
+# installApp "zip" "Visual Studio Code" "Visual Studio Code.app" "http://go.microsoft.com/fwlink/?LinkID=620882" "" "" ""
+# installApp "dmg" "ZOOM"         "Zoom.app"    "https://zoom.us/client/latest/Zoom.pkg" "" "" ""
+# installApp "dmg" "Fraidycat"         "Fraidycat.app"    "https://github.com/kickscondor/fraidycat/releases/download/v1.1.6/Fraidycat-1.1.6.dmg" "" "" "" 
 ###############################
 #    Print script footer      #
 ###############################
@@ -148,3 +145,6 @@ echo $'-------------------------------------------------------------------------
 echo $'\360\237\222\254   We are done.'
 echo $'------------------------------------------------------------------------------'
 # macapps.sh ends here
+
+brew install gawk postgresql translate-shell stree asciinema imagemagick aspell unrar jq aws-elasticbeanstalk git jrnl awscli git-gui nvm bottom offlineimap browsh ripgrep wget shellcheck links yarn pandoc speedtest-cli youtube-dl fd zsh hicolor-icon-theme mpv the_silver_searcher htop mu theora
+XS

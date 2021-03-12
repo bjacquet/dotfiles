@@ -92,7 +92,7 @@ zstyle ':prezto:module:editor' key-bindings 'emacs'
 # Prompt
 #
 
-COOL_THEMES=('giddie' 'pure' 'steeef' 'clint' 'sorin');
+COOL_THEMES=('giddie' 'pure' 'steeef' 'powerlevel10k');
 
 # Set the prompt theme to load.
 # Setting it to 'random' loads a random theme.
