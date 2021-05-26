@@ -19,7 +19,6 @@
 	excludesfile = /Users/bjacquet/.gitignore_global
 [github]
 	user = bjacquet
-	token = 6c5a50f81cc2659a37d786c8628157e9
 [diff "lisp"]
 	xfuncname="^;;;([A-Z][-A-Z0-9\\. \\(\\)]+)$"
 [color]

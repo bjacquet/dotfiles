@@ -136,7 +136,53 @@ installApp() {
 # installApp "dmg" "GIMP"         "Gimp-2.10.app"    "http://download.gimp.org/mirror/pub/gimp/v2.10/osx/gimp-2.10.14-x86_64-1.dmg" "" "" ""
 # installApp "zip" "Visual Studio Code" "Visual Studio Code.app" "http://go.microsoft.com/fwlink/?LinkID=620882" "" "" ""
 # installApp "dmg" "ZOOM"         "Zoom.app"    "https://zoom.us/client/latest/Zoom.pkg" "" "" ""
-# installApp "dmg" "Fraidycat"         "Fraidycat.app"    "https://github.com/kickscondor/fraidycat/releases/download/v1.1.6/Fraidycat-1.1.6.dmg" "" "" "" 
+# installApp "dmg" "Fraidycat"         "Fraidycat.app"    "https://github.com/kickscondor/fraidycat/releases/download/v1.1.6/Fraidycat-1.1.6.dmg" "" "" ""
+
+echo "asciinema
+aspell
+automake
+bat
+bottom
+browsh
+elixir
+eslint
+exercism
+fd
+gawk
+git
+git-gui
+git-gui
+graphviz
+hicolor-icon-theme
+htop
+imagemagick
+jq
+jrnl
+just
+links
+mpv
+mu
+pandoc
+ripgrep
+ripgrep-all
+saulpw/vd/visidata
+sbcl
+shellcheck
+speedtest-cli
+taskell
+the_silver_searcher
+theora
+tor
+translate-shell
+transmission-cli
+tree
+unrar
+wez/wezterm/wezterm
+wget
+youtube-dl
+zsh
+" | brew install
+
 ###############################
 #    Print script footer      #
 ###############################
@@ -145,6 +191,3 @@ echo $'-------------------------------------------------------------------------
 echo $'\360\237\222\254   We are done.'
 echo $'------------------------------------------------------------------------------'
 # macapps.sh ends here
-
-brew install gawk postgresql translate-shell stree asciinema imagemagick aspell unrar jq aws-elasticbeanstalk git jrnl awscli git-gui nvm bottom offlineimap browsh ripgrep wget shellcheck links yarn pandoc speedtest-cli youtube-dl fd zsh hicolor-icon-theme mpv the_silver_searcher htop mu theora
-XS
