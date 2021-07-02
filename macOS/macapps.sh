@@ -13,26 +13,18 @@
 #  - Query user for new URL if download fails.
 #  - Add apps:
 #    - Pocket
-#    - Google Drive ?
 #    - Dropbox
 #    - Clementine
 #    - Audacity
 #    - XLD
 #    - VirtualBox
 #    - The Unarchiver
-#    - KeePassX
-#    - TomTom Sports
-#    - Keybase
+#    - KeePassXD
 #    - Shiba
 #    - iReal Pro
 #    - Signal
 #    - Hugin
-#    - Transcribe ?
-#    - ZOOM Edit&Share ?
 #    - GPG
-#    - Chrome
-#    - CHM View and CHM-to-PDF ?
-#    - XPS-to-PDF Lite ?
 #
 #===============================================================================
 set -eu
@@ -118,23 +110,19 @@ installApp() {
 # installApp "dmg" "Slack"       "Slack.app"          "https://slack.com/ssb/download-osx" "" "" ""
 # installApp "dmg" "Skype"       "Skype.app"          "http://www.skype.com/go/getskype-macosx.dmg" "" "" ""
 # installApp "dmg" "Thunderbird" "Thunderbird.app"    "http://download.mozilla.org/?product=thunderbird-latest&os=osx&lang=en-UK" "" "" ""
-# installApp "dmg" "WhatsApp"    "WhatsApp.app"       "https://web.whatsapp.com/desktop/mac/files/WhatsApp.dmg" "" "" ""
 # installApp "zip" "Amethyst"    "Amethyst.app"       "http://ianyh.com/amethyst/versions/Amethyst-latest.zip" "" "" ""
-# installApp "zip" "Flux"        "Flux.app"           "https://justgetflux.com/mac/Flux.zip" "" "" "build"
 # installApp "zip" "OpenEmu"     "OpenEmu.app"        "https://github.com/OpenEmu/OpenEmu/releases/download/v2.0.6.1/OpenEmu_2.0.6.1.zip" "" "" "build"
 # installApp "zip" "iTerm2"      "iTerm.app"          "https://iterm2.com/downloads/stable/latest" "" "" ""
 
 # installApp "dmg" "KeePassXC"    "KeePassXC.app"    "https://github.com/keepassxreboot/keepassxc/releases/download/2.6.1/KeePassXC-2.6.1.dmg" "" "" ""
 # installApp "zip" "OpenEmu"      "OpenEmu.app"      "https://github.com/OpenEmu/OpenEmu/releases/download/v2.0.6.1/OpenEmu_2.0.6.1.zip" "" "" "build"
 # installApp "dmg" "Steam"        "Steam.app"        "http://media.steampowered.com/client/installer/steam.dmg" "" "" "build"
-# installApp "zip" "Chromium"     "Chromium.app"     "https://download-chromium.appspot.com/dl/Mac" "chrome-mac/" "" ""
 # installApp "dmg" "TorBrowser"   "TorBrowser.app"   "https://www.torproject.org/dist/torbrowser/8.0.4/TorBrowser-8.0.4-osx64_en-US.dmg" "" "" ""
 # installApp "dmg" "LibreOffice"  "LibreOffice.app"  "http://download.documentfoundation.org/libreoffice/stable/7.0.1/mac/x86_64/LibreOffice_7.0.1_MacOS_x86-64.dmg" "" "" ""
 
 # installApp "dmg" "Transmission" "Transmission.app" "https://github.com/transmission/transmission-releases/raw/master/Transmission-2.92.dmg" "" "" ""
 # installApp "dmg" "VLC"          "VLC.app"          "http://get.videolan.org/vlc/3.0.11.1/macosx/vlc-3.0.11.1.dmg" "" "" ""
 # installApp "dmg" "GIMP"         "Gimp-2.10.app"    "http://download.gimp.org/mirror/pub/gimp/v2.10/osx/gimp-2.10.14-x86_64-1.dmg" "" "" ""
-# installApp "zip" "Visual Studio Code" "Visual Studio Code.app" "http://go.microsoft.com/fwlink/?LinkID=620882" "" "" ""
 # installApp "dmg" "ZOOM"         "Zoom.app"    "https://zoom.us/client/latest/Zoom.pkg" "" "" ""
 # installApp "dmg" "Fraidycat"         "Fraidycat.app"    "https://github.com/kickscondor/fraidycat/releases/download/v1.1.6/Fraidycat-1.1.6.dmg" "" "" ""
 
