@@ -32,5 +32,11 @@ fi
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
+# ASDF
+if [ -f /usr/local/opt/asdf/asdf.sh ]; then
+  . /usr/local/opt/asdf/asdf.sh
+  export PATH="$HOME/.asdf/shims:$PATH" 
+fi
+
 export PATH="$HOME/.poetry/bin:$PATH"
 
