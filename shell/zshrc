@@ -20,13 +20,14 @@ if [[ -s ~/.dotfiles/shell/zim_pre_configuration.zsh ]]; then
   source ~/.dotfiles/shell/zim_pre_configuration.zsh
 fi
 
+
 # Customize to your needs...
 
 . ~/.dotfiles/shell/alias
 . ~/.dotfiles/shell/functions/zsh
 
 # Suggested by Exercism
-export PATH=$HOME/Applications:$PATH
+# export PATH=$HOME/Applications:$PATH
 
 # Exercism CLI completion
 if [ -f ~/.config/exercism/exercism_completion.zsh ]; then
@@ -38,9 +39,6 @@ if [[ $(uname) == "Darwin" ]] && [[ -d /usr/local/bin ]]; then
   export PATH="/usr/local/bin:$PATH"
 fi
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
-
 # ASDF
 if [ -f /usr/local/opt/asdf/asdf.sh ]; then
   . /usr/local/opt/asdf/asdf.sh
@@ -51,3 +49,4 @@ export PATH="$HOME/.poetry/bin:$PATH"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
