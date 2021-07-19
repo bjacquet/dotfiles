@@ -6,9 +6,7 @@ function bjFontRandom()
     "Anonymous Pro",
     "Comic Mono",
     "CozetteVector",
-    "Menlo",
     "MesloLGS NF",
-    "Monaco",
     "NovaMono",
     "Victor Mono",
     "iA Writer Mono S",
@@ -26,5 +24,5 @@ end
 
 return {
     font = wezterm.font(bjFontRandom()),
-    font_size = 14
+    font_size = 14,
 }
