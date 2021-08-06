@@ -12,7 +12,7 @@
         pushit = "!f() { git branch | grep \"*\" | cut -c 3- | xargs -I{} git push -u origin {}; }; f"
 [user]
 	name = Bruno Jacquet
-	email = b.jacquet@runtime-revolution.com
+	email = bruno.jacquet@onfido.com
 [core]
 	attributesfile = ~/.gitattributes
 	autocrlf = input
