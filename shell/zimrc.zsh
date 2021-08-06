@@ -18,12 +18,10 @@ zmodule utility
 #
 # Prompt
 #
-# Exposes to prompts how long the last command took to execute, used by asciiship.
-zmodule duration-info
-# Exposes git repository status information to prompts, used by asciiship.
-zmodule git-info
-# A heavily reduced, ASCII-only version of the Spaceship and Starship prompts.
-zmodule asciiship
+autoload -U promptinit; promptinit
+
+PURE_PROMPT_SYMBOL='%Bλ≈%b';
+zmodule sindresorhus/pure --source async.zsh --source pure.zsh
 
 # Additional completion definitions for Zsh.
 zmodule zsh-users/zsh-completions
@@ -37,4 +35,3 @@ zmodule zsh-users/zsh-syntax-highlighting
 # zsh-users/zsh-history-substring-search must be sourced after zsh-users/zsh-syntax-highlighting
 zmodule zsh-users/zsh-history-substring-search
 # }}} End configuration added by Zim install
-
