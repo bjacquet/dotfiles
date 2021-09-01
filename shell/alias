@@ -2,10 +2,23 @@
 
 # Alias definitions.
 
-alias ls='ls -G'
-alias ll='ls -l'
-alias la='ls -A'
-alias lla='la -l'
+## Use `exa` instead of `ls` if available.
+if [[ $(command -v exa) ]]; then
+  alias ls='exa'
+  alias ll='exa -l'
+  alias la='exa -a'
+  alias lla='exa -la'
+else
+  alias ls='ls -G'
+  alias ll='ls -l'
+  alias la='ls -A'
+  alias lla='la -l'
+fi
+
+## Use bat instead of cat if available.
+if [[ $(command -v bat) ]]; then
+  alias cat='bat'
+fi
 
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
@@ -13,7 +26,7 @@ alias egrep='egrep --color=auto'
 
 alias xterm='xterm -r'
 
-alias bj_emacs='emacs -l ~/.emacs.d/future.emacs.el'
+alias bjemacs='emacs -l ~/.emacs.d/future.emacs.el'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -24,3 +37,6 @@ if [[ $(uname -n) == "puffin.lan" ]]; then
   alias emacs-org='emacs -g 60x24 --find-file ~/Dropbox/Documents/Orgzly/Anotations.org'
   alias emacs-vanilla='emacs --no-init-file'
 fi
+
+# jrnl.sh shortcuts
+alias bjjrnltodo='jrnl @todo -not @done'
