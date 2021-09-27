@@ -4,3 +4,4 @@ fpath=(~/.dotfiles/shell/functions $fpath)
 autoload git-rebase-master
 autoload rudi
 autoload git-delete-done
+autoload git-heatmap
