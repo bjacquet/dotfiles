@@ -64,7 +64,7 @@ while [[ $# -gt 0 ]]; do
       ;;
     -h)
       cat <<EOF
-Heatmap of oft-edited files.
+Heatmap of often-edited files.
 Usage:
   git heatmap [options] [<path>...]
 Options:
@@ -118,6 +118,11 @@ filter() {
 histogram() {
   "$bars" --bar "$CHAR" --width "$WIDTH"
 }
+
+if [[ ! -d .git ]]; then
+  echo "Current directory is not a git repository."
+  exit 1
+fi
 
 if command -v barchart &> /dev/null; then
   bars="barchart"
