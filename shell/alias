@@ -15,11 +15,6 @@ else
   alias lla='la -l'
 fi
 
-## Use bat instead of cat if available.
-if [[ $(command -v bat) ]]; then
-  alias cat='bat'
-fi
-
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
