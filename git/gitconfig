@@ -12,16 +12,15 @@
         pushit = "!f() { git branch | grep \"*\" | cut -c 3- | xargs -I{} git push -u origin {}; }; f"
 [user]
 	name = Bruno Jacquet
-	email = bruno.jacquet@onfido.com
 [core]
 	attributesfile = ~/.gitattributes
 	autocrlf = input
 	excludesfile = /Users/bjacquet/.gitignore_global
-[github]
-	user = bjacquet
 [diff "lisp"]
 	xfuncname="^;;;([A-Z][-A-Z0-9\\. \\(\\)]+)$"
 [color]
 	ui = auto
 [pull]
 	rebase = false
+[include]
+        path = gitconfigplus.inc
