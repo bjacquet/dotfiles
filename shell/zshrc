@@ -1,3 +1,4 @@
+#!/bin/zsh
 # -*- mode: shell-script -*-
 #
 
@@ -16,8 +17,8 @@ fi
 
 
 # Source ZIM.
-if [[ -s ~/.dotfiles/shell/zim_pre_configuration.zsh ]]; then
-  source ~/.dotfiles/shell/zim_pre_configuration.zsh
+if [[ -d "${ZIM_HOME}" ]]; then
+  source "~/.dotfiles/shell/zim.zsh"
 fi
 
 
