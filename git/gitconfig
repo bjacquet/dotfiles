@@ -13,7 +13,7 @@
 [user]
 	name = Bruno Jacquet
 [core]
-	attributesfile = ~/.gitattributes
+	attributesfile = ~/.dotfiles/git/gitattributes
 	autocrlf = input
 	excludesfile = /Users/bjacquet/.gitignore_global
 [diff "lisp"]
@@ -22,5 +22,9 @@
 	ui = auto
 [pull]
 	rebase = false
-[include]
-        path = gitconfigplus.inc
+
+# Add these to the repository's .git/config file
+# [user]
+# 	email = 
+# [github]
+# 	user = 
