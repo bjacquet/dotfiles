@@ -35,3 +35,4 @@ fi
 
 # jrnl.sh shortcuts
 alias bjjrnltodo='jrnl @todo -not @done'
+alias bjjrnltodolist='jrnl @todo-list -on today'
