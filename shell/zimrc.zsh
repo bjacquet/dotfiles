@@ -20,7 +20,6 @@ zmodule utility
 #
 autoload -U promptinit; promptinit
 
-PURE_PROMPT_SYMBOL='%Bλ≈%b';
 zmodule sindresorhus/pure --source async.zsh --source pure.zsh
 
 # Additional completion definitions for Zsh.

@@ -18,6 +18,7 @@ fi
 # Source ZIM.
 if [[ -d "${ZIM_HOME}" ]]; then
   source ~/.dotfiles/shell/zim_pre_configuration.zsh
+  PURE_PROMPT_SYMBOL='%Bλ≈%b'
 fi
 
 
@@ -45,7 +46,11 @@ if [ -f /usr/local/opt/asdf/asdf.sh ]; then
   export PATH="$HOME/.asdf/shims:$PATH" 
 fi
 
+# Poetry
 export PATH="$HOME/.poetry/bin:$PATH"
+
+# Prevent Homebrew from uptating all packages when I install something new!
+export HOMEBREW_NO_AUTO_UPDATE=1
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
