@@ -46,9 +46,6 @@ if [ -f /usr/local/opt/asdf/asdf.sh ]; then
   export PATH="$HOME/.asdf/shims:$PATH" 
 fi
 
-# Poetry
-export PATH="$HOME/.poetry/bin:$PATH"
-
 # Prevent Homebrew from uptating all packages when I install something new!
 export HOMEBREW_NO_AUTO_UPDATE=1
 
@@ -57,5 +54,4 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 
 source "/Users/bruno.jacquet/Library/Application Support/creds/nexus"
 
-# McFly https://github.com/cantino/mcfly
-eval "$(mcfly init zsh)"
+export PATH="/Users/bruno.jacquet/.local/bin:$PATH"
