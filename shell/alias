@@ -9,7 +9,7 @@ if [[ $(command -v exa) ]]; then
   alias la='exa -a'
   alias lla='exa -la'
 else
-  alias ls='ls -G'
+  alias ls='ls -G --color=auto'
   alias ll='ls -l'
   alias la='ls -A'
   alias lla='la -l'
@@ -21,13 +21,21 @@ alias egrep='egrep --color=auto'
 
 alias xterm='xterm -r'
 
-alias bjemacs='emacs -l ~/.emacs.d/future.emacs.el'
-alias .emacs='emacs -l ~/.emacs.d/future.emacs.el'
-
-
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+alert(){
+    start=$(date +%s)
+    "$@"
+    [ $(($(date +%s) - start)) -le 15 ] || notify-send "Notification" "Long\
+ running command \"$(echo $@)\" took $(($(date +%s) - start)) seconds to finish"
+}
+
+# jrnl.sh shortcuts
+alias .jrnltodo='jrnl @todo -not @done'
+alias .jrnltodolist='jrnl @todo-list -on today'
+
+# emacs related
+alias .emacs='emacs -l ~/.config/emacs/load-config.el'
 
 # MacOS workaround
 if [[ $(uname -n) == "puffin.lan" ]]; then
@@ -35,6 +43,6 @@ if [[ $(uname -n) == "puffin.lan" ]]; then
   alias emacs-vanilla='emacs --no-init-file'
 fi
 
-# jrnl.sh shortcuts
-alias bjjrnltodo='jrnl @todo -not @done'
-alias bjjrnltodolist='jrnl @todo-list -on today'
+# git related
+alias .gmp='git checkout master && git pull'
+alias .gdd='git branch | grep "  done-" | xargs -I {} git branch -d {};'
