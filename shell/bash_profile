@@ -82,6 +82,14 @@ if ! shopt -oq posix; then
   fi
 fi
 
+
+# Editors
+
+EDITOR="emacs -nw"
+VISUAL="emacs -nw"
+PAGER='less'
+
+
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
@@ -111,3 +119,21 @@ if [[ $(uname) == "Darwin" ]] && [[ -d /usr/local/bin ]]; then
 fi
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+
+# ASDF
+. $HOME/Applications/asdf/asdf.sh
+. $HOME/Applications/asdf/completions/asdf.bash
+
+# Created by `pipx` on 2022-10-10 13:28:09
+export PATH="$PATH:/home/brunojacquet/.local/bin"
+
+# Load Starship https://starship.rs/
+export STARSHIP_CONFIG=~/.dotfiles/shell/starship.toml
+eval "$(starship init bash)"
+
+export HEX_REPO_KEY="1e207657ffe26761a67160e3fe756f73"
+. "$HOME/.cargo/env"
+
+#
+source $HOME/Projects/Onfido/shell/commands.sh
