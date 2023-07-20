@@ -1,3 +1,4 @@
+#!/bin/bash
 # -*- mode: shell-script -*-
 
 # Alias definitions.
@@ -22,8 +23,8 @@ alias egrep='egrep --color=auto'
 alias xterm='xterm -r'
 
 # Add an "alert" alias for long running commands.  Use like so:
-#   sleep 10; alert
-alert(){
+#   .alert sleep 15
+.alert(){
     start=$(date +%s)
     "$@"
     [ $(($(date +%s) - start)) -le 15 ] || notify-send "Notification" "Long\
@@ -47,6 +48,6 @@ fi
 alias .git_checkout_master_pull='git checkout master && git pull'
 alias .git_delete_done_branches='git branch | grep "  done-" | xargs -I {} git branch -d {};'
 alias .git_fetch_rebase_origin_master='git fetch origin master:master && git rebase origin/master'
-alias .git_hard_reset_master='git fetch origin master::master && git checkout master && git reset --hard origin/master'
+alias .git_hard_reset_master='git fetch origin master:master && git checkout master && git reset --hard origin/master'
 
 alias .date='date --rfc-email --utc'
