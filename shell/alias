@@ -45,9 +45,15 @@ if [[ $(uname -n) == "puffin.lan" ]]; then
 fi
 
 # git related
+alias .git_checkout_main_pull='git checkout main && git pull'
 alias .git_checkout_master_pull='git checkout master && git pull'
 alias .git_delete_done_branches='git branch | grep "  done-" | xargs -I {} git branch -d {};'
+alias .git_fetch_rebase_origin_development='git fetch origin development:development && git rebase origin/development'
+alias .git_fetch_rebase_origin_main='git fetch origin main:main && git rebase origin/main'
 alias .git_fetch_rebase_origin_master='git fetch origin master:master && git rebase origin/master'
+alias .git_hard_reset_main='git fetch origin main:main && git checkout main && git reset --hard origin/main'
 alias .git_hard_reset_master='git fetch origin master:master && git checkout master && git reset --hard origin/master'
 
 alias .date='date --rfc-email --utc'
+
+alias .onefetch='onefetch --no-title --no-color-palette --number-of-authors 5 --number-of-file-churns 5'
