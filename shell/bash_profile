@@ -137,3 +137,6 @@ export HEX_REPO_KEY="1e207657ffe26761a67160e3fe756f73"
 
 #
 source $HOME/Projects/Onfido/shell/commands.sh
+
+# Atuin https://atuin.sh/
+. "$HOME/.atuin/bin/env"

@@ -16,6 +16,7 @@
 	attributesfile = ~/.dotfiles/git/gitattributes
 	autocrlf = input
 	excludesfile = /Users/bjacquet/.gitignore_global
+	editor = emacs -nw
 [diff "lisp"]
 	xfuncname="^;;;([A-Z][-A-Z0-9\\. \\(\\)]+)$"
 [color]
