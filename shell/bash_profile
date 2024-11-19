@@ -135,7 +135,7 @@ eval "$(starship init bash)"
 export HEX_REPO_KEY="1e207657ffe26761a67160e3fe756f73"
 . "$HOME/.cargo/env"
 
-#
+source $HOME/.dotfiles/shell/functions/bash.sh
 source $HOME/Projects/Onfido/shell/commands.sh
 
 # Atuin https://atuin.sh/
