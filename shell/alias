@@ -3,12 +3,12 @@
 
 # Alias definitions.
 
-## Use `exa` instead of `ls` if available.
-if [[ $(command -v exa) ]]; then
-  alias ls='exa'
-  alias ll='exa -l'
-  alias la='exa -a'
-  alias lla='exa -la'
+## Use `eza` instead of `ls` if available.
+if [[ $(command -v eza) ]]; then
+  alias ls='eza'
+  alias ll='eza -l'
+  alias la='eza -a'
+  alias lla='eza -la'
 else
   alias ls='ls -G --color=auto'
   alias ll='ls -l'
