@@ -1,4 +1,4 @@
 #!/bin/bash
 # -*- mode: shell-script -*-
 
-source $HOME/.dotfiles/shell/functions/highlight.sh
+source $HOME/.config/dotfiles/shell/functions/highlight.sh

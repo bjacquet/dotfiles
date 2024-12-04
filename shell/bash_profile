@@ -95,7 +95,7 @@ PAGER='less'
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
-. ~/.dotfiles/shell/alias
+. ~/.config/dotfiles/shell/alias
 
 
 if [[ $(uname -n) == "puffin.lan" ]]; then
@@ -122,21 +122,18 @@ fi
 
 
 # ASDF
-. $HOME/Applications/asdf/asdf.sh
-. $HOME/Applications/asdf/completions/asdf.bash
-
-# Created by `pipx` on 2022-10-10 13:28:09
-export PATH="$PATH:/home/brunojacquet/.local/bin"
+if [[ $(uname) != "Darwin" ]]; then
+    . $HOME/Applications/asdf/asdf.sh
+    . $HOME/Applications/asdf/completions/asdf.bash
+fi
 
 # Load Starship https://starship.rs/
-export STARSHIP_CONFIG=~/.dotfiles/shell/starship.toml
+export STARSHIP_CONFIG=~/.config/dotfiles/shell/starship.toml
 eval "$(starship init bash)"
 
-export HEX_REPO_KEY="1e207657ffe26761a67160e3fe756f73"
-. "$HOME/.cargo/env"
 
-source $HOME/.dotfiles/shell/functions/bash.sh
-source $HOME/Projects/Onfido/shell/commands.sh
+source $HOME/.config/dotfiles/shell/functions/bash.sh
+
 
 # Direnv https://direnv.net/
 eval "$(direnv hook bash)"
