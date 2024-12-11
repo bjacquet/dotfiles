@@ -16,6 +16,11 @@ else
   alias lla='la -l'
 fi
 
+## `bat` is a `cat` alternative.
+if [[ $(command -v cat) ]]; then
+  alias .batcat='bat'
+fi
+
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
