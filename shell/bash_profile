@@ -135,8 +135,12 @@ export STARSHIP_CONFIG=~/.config/dotfiles/shell/starship.toml
 eval "$(starship init bash)"
 
 
-source $HOME/.config/dotfiles/shell/functions/bash.sh
+# Git completion
+if [[ $(uname) == "Darwin" ]]; then
+    source /opt/homebrew/etc/bash_completion.d/git-completion.bash
+fi
 
+source $HOME/.config/dotfiles/shell/functions/bash.sh
 
 # Direnv https://direnv.net/
 eval "$(direnv hook bash)"
