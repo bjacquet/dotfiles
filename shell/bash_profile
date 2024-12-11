@@ -125,6 +125,9 @@ fi
 if [[ $(uname) != "Darwin" ]]; then
     . $HOME/Applications/asdf/asdf.sh
     . $HOME/Applications/asdf/completions/asdf.bash
+else
+    . "/opt/homebrew/opt/asdf/libexec/asdf.sh"
+    . "/opt/homebrew/opt/asdf/etc/bash_completion.d/asdf.bash"
 fi
 
 # Load Starship https://starship.rs/
