@@ -40,8 +40,8 @@ fi
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
     xterm-color|*-256color)
-	color_prompt=yes;
-	autoload -U colors && colors
+        color_prompt=yes;
+        eval "$(dircolors -b)"
 esac
 
 if [ "$color_prompt" = yes ]; then
@@ -55,7 +55,7 @@ if [ "$color_prompt" = yes ]; then
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
-unset color_prompt force_color_prompt
+unset color_prompt
 
 # If this is an xterm set the title to user@host
 case "$TERM" in
@@ -131,6 +131,7 @@ else
 fi
 
 # Load Starship https://starship.rs/
+# Installed with `curl -sS https://starship.rs/install.sh | sh`
 export STARSHIP_CONFIG=~/.config/dotfiles/shell/starship.toml
 eval "$(starship init bash)"
 
