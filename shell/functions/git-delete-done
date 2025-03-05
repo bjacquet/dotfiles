@@ -2,6 +2,6 @@
 # -*- mode: shell-script -*-
 
 # Deletes local branches named as `done-*`.
-.agit-rebase-master() {
+git_delete_done() {
     git branch | grep "  done-" | xargs -I {} git branch -d {};
 }
