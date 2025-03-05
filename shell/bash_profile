@@ -115,7 +115,7 @@ fi
 
 # Because of Homebrew
 if [[ $(uname) == "Darwin" ]] && [[ -d /usr/local/bin ]]; then
-  export PATH="/usr/local/bin:$PATH"
+  export PATH="/opt/homebrew/bin:/usr/local/bin:$PATH"
 fi
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
