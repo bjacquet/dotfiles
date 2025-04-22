@@ -175,5 +175,8 @@ vterm_prompt_end(){
 
 PS1=$PS1'\[$(vterm_prompt_end)\]'
 
-# Atuin https://atuin.sh/
+# Atuin
+# See ./atuin_config.toml
 [ -e "$HOME/.atuin/bin/env" ] && . "$HOME/.atuin/bin/env"
+
+
