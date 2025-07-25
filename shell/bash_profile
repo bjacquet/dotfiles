@@ -183,3 +183,5 @@ PS1=$PS1'\[$(vterm_prompt_end)\]'
 [ -e "$HOME/.atuin/bin/env" ] && . "$HOME/.atuin/bin/env"
 
 
+
+export ERL_AFLAGS="-kernel shell_history enabled"
