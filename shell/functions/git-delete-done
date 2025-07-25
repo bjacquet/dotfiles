@@ -2,6 +2,6 @@
 # -*- mode: shell-script -*-
 
 # Deletes local branches named as `done-*`.
-git_delete_done() {
+.git_delete_done_branches() {
     git branch | grep "  done-" | xargs -I {} git branch -d {};
 }

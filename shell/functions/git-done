@@ -1,0 +1,11 @@
+#!/bin/bash
+# -*- mode: shell-script -*-
+
+# Prepends `done-` to branch name.
+# Deletes remote tracking branch.
+.git_done() {
+    branch=$(git branch | grep "*" | cut -c 3-)
+
+    git branch -m "$branch" "done-$branch"
+    git branch -d -r origin/"$branch"
+}

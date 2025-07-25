@@ -1,0 +1,14 @@
+#!/bin/bash
+# -*- mode: shell-script -*-
+
+# Creates a new branch with the given name.
+.git_new_branch() {
+  if [[ -n "$1" ]]; then
+    branch="$1"
+  else
+    echo "Please provide a branch name."
+    return 1
+  fi
+
+  git checkout -b "$branch"
+}

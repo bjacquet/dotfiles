@@ -3,7 +3,7 @@
 
 # Get the latest changes on master pulled down locally
 # and then rebase them into/onto the current branch
-git-rebase-master() {
+.git_rebase_master() {
   if [[ -n "$1" ]]; then
     branch="$1"
   else

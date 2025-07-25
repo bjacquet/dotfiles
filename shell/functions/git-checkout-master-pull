@@ -1,0 +1,7 @@
+#!/bin/bash
+# -*- mode: shell-script -*-
+
+# Tries to checkout master and pulls from origin.
+.git_checkout_master_pull() {
+    git checkout master && git pull
+}
