@@ -1,7 +1,8 @@
 [alias]
         alias = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
         branch-age = !git for-each-ref --sort=-committerdate refs/heads --format='%(HEAD)%(refname:short)|%(committerdate:relative)|%(subject)|%(authorname)'|column -ts'|'
-        branch-diff = !git diff --stat $(git merge-base HEAD origin/master)
+        branch-stats = !git diff --stat $(git merge-base HEAD \"${review_base:-origin/master}\")
+        branch-files = !git diff $(git merge-base HEAD \"${review_base:-origin/master}\")
         done = "!f() { git branch | grep \"*\" | cut -c 3- | xargs -I{} git branch -m {} done-{}; }; f"
         latest = log --graph --decorate --oneline -7 --pretty=format:'%C(bold blue)%h%C(reset) %C(bold green)%ar%C(reset) %C(white)%s%C(reset) %C(dim white)%an%C(reset)%C(auto)%d%C(reset)'
         pbranch-age = for-each-ref --sort=-committerdate refs/heads --format='%(HEAD)%(color:yellow)%(refname:short) %(color:bold green)%(committerdate:relative) %(color:magenta)%(authorname)%0a%(color:blue)%(subject)%(color:reset)%0a'
@@ -12,11 +13,11 @@
         undone = "!f() { git branch | grep \"*\" | cut -c 8- | xargs -I {} git branch -m done-{} {}; }; f"
         unstage = reset HEAD --
 [user]
-	name = Bruno Jacquet
+        name = Bruno Jacquet
 [core]
-	attributesfile = ~/.dotfiles/git/gitattributes
+	attributesfile = ~/.config/dotfiles/git/gitattributes
 	autocrlf = input
-	excludesfile = /Users/bjacquet/.gitignore_global
+	excludesfile = ~/.config/dotfiles/git/gitignore
 	editor = emacs -nw
 [diff "lisp"]
 	xfuncname="^;;;([A-Z][-A-Z0-9\\. \\(\\)]+)$"
