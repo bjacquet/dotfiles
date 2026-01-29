@@ -8,3 +8,4 @@ source $HOME/.config/dotfiles/shell/functions/git-new-branch
 source $HOME/.config/dotfiles/shell/functions/git-rebase-master
 source $HOME/.config/dotfiles/shell/functions/git-stat
 source $HOME/.config/dotfiles/shell/functions/highlight.sh
+source $HOME/.config/dotfiles/shell/functions/timestamp.sh
