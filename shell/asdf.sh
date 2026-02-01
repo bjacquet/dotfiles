@@ -1,0 +1,2 @@
+export ASDF_ELIXIR_VERSION=latest
+export ASDF_RUBY_VERSION=3.4.4

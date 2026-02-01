@@ -151,6 +151,11 @@ source $HOME/.config/dotfiles/shell/functions/bash.sh
 # Direnv https://direnv.net/
 eval "$(direnv hook bash)"
 
+
+# Mise
+eval "$(mise activate bash)"
+
+
 # Emacs vterm × shell integration
 # From https://github.com/akermu/emacs-libvterm#shell-side-configuration
 
@@ -181,6 +186,9 @@ PS1=$PS1'\[$(vterm_prompt_end)\]'
 # Atuin
 # See ./atuin_config.toml
 [ -e "$HOME/.atuin/bin/env" ] && . "$HOME/.atuin/bin/env"
+[[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
+eval "$(atuin init bash)"
+
 
 
 
