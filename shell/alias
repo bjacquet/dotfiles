@@ -17,8 +17,12 @@ else
 fi
 
 ## `bat` is a `cat` alternative.
-if [[ $(command -v cat) ]]; then
+if [[ $(command -v bat) ]]; then
   alias .batcat='bat'
+elif [[ $(command -v batcat) ]]; then
+  alias .batcat='batcat'
+fi
+
 fi
 
 alias grep='grep --color=auto'
