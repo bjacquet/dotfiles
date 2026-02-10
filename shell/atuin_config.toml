@@ -187,6 +187,7 @@ enter_accept = true
 common_subcommands = [
   "apt",
   "cargo",
+  "cd",
   "composer",
   "dnf",
   "docker",
