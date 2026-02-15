@@ -23,8 +23,6 @@ elif [[ $(command -v batcat) ]]; then
   alias .batcat='batcat'
 fi
 
-fi
-
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
