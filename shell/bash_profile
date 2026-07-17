@@ -196,3 +196,7 @@ eval "$(atuin init bash)"
 
 
 export ERL_AFLAGS="-kernel shell_history enabled"
+
+# K9s
+export K9S_CONFIG_DIR="$HOME/.config/dotfiles/k9s"
+

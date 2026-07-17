@@ -1,0 +1,12 @@
+k9s:
+  cluster: kubernetes
+  namespace:
+    active: default
+    lockFavorites: false
+    favorites:
+      - default
+  view:
+    active: "no"
+  featureGates:
+    nodeShell: false
+  proxy: null

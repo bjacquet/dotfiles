@@ -1,2 +1,9 @@
 /git/gitconfigplus.inc
 /secret
+
+/k9s
+!/k9s/aliases.yaml
+!/k9s/clusters/kubernetes/aws/benchmarks.yaml
+!/k9s/clusters/kubernetes/aws/config.yaml
+!/k9s/config.yaml
+!/k9s/views.yaml
