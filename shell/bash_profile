@@ -121,6 +121,9 @@ if [[ $(uname) == "Darwin" ]] && [[ -d /usr/local/bin ]]; then
   export PATH="/opt/homebrew/bin:/usr/local/bin:$PATH"
 fi
 
+# Set environment variables with secrets
+source "$HOME/.config/dotfiles/secret/secrets.sh"
+
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 
