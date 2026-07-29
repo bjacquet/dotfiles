@@ -156,7 +156,9 @@ eval "$(direnv hook bash)"
 
 
 # Mise
-eval "$(mise activate bash)"
+if [[ $(command -v mise) ]]; then
+    eval "$(mise activate bash)"
+fi
 
 
 # Emacs vterm × shell integration
