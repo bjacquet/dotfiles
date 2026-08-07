@@ -121,8 +121,15 @@ if [[ $(uname) == "Darwin" ]] && [[ -d /usr/local/bin ]]; then
   export PATH="/opt/homebrew/bin:/usr/local/bin:$PATH"
 fi
 
-# Set environment variables with secrets
-source "$HOME/.config/dotfiles/secret/secrets.sh"
+# Set environment variables through secrets file
+# Or create file if it does not exist.
+if [[ -f "$HOME/.config/dotfiles/secret/secrets.sh" ]]; then
+    source "$HOME/.config/dotfiles/secret/secrets.sh"
+else
+    mkdir "$HOME/.config/dotfiles/secret"
+    touch "$HOME/.config/dotfiles/secret/secrets.sh"
+    echo "FYI Created 'secrets.sh' file at $HOME/.config/dotfiles/secret/secrets.sh"
+fi
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
@@ -140,8 +147,12 @@ fi
 
 # Load Starship https://starship.rs/
 # Installed with `curl -sS https://starship.rs/install.sh | sh`
-export STARSHIP_CONFIG=~/.config/dotfiles/shell/starship.toml
-eval "$(starship init bash)"
+if [[ $(command -v starship) ]]; then
+    export STARSHIP_CONFIG=~/.config/dotfiles/shell/starship.toml
+    eval "$(starship init bash)"
+else
+    echo "FYI Starship is not installed https://starship.rs/"
+fi
 
 
 # Git completion
@@ -151,13 +162,20 @@ fi
 
 source $HOME/.config/dotfiles/shell/functions/bash.sh
 
+
 # Direnv https://direnv.net/
-eval "$(direnv hook bash)"
+if [[ $(command -v direnv) ]]; then
+    eval "$(direnv hook bash)"
+else
+    echo "FYI Direnv is not installed https://direnv.net/"
+fi
 
 
-# Mise
+# Load Mise https://mise.jdx.dev/
 if [[ $(command -v mise) ]]; then
     eval "$(mise activate bash)"
+else
+    echo "FYI Mise is not installed https://mise.jdx.dev/"
 fi
 
 
@@ -188,13 +206,15 @@ vterm_prompt_end(){
 
 PS1=$PS1'\[$(vterm_prompt_end)\]'
 
-# Atuin
+# Atuin https://atuin.sh/
 # See ./atuin_config.toml
-[ -e "$HOME/.atuin/bin/env" ] && . "$HOME/.atuin/bin/env"
-[[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
-eval "$(atuin init bash)"
-
-
+if [[ $(command -v atuin) ]]; then
+    [ -e "$HOME/.atuin/bin/env" ] && . "$HOME/.atuin/bin/env"
+    [[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
+    eval "$(atuin init bash)"
+else
+    echo "FYI Atuin is not installed https://atuin.sh/"
+fi
 
 
 export ERL_AFLAGS="-kernel shell_history enabled"

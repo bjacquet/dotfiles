@@ -10,6 +10,7 @@ if [[ $(command -v eza) ]]; then
   alias la='eza -a'
   alias lla='eza -la'
 else
+  echo "FYI Eza is not installed https://eza.rocks/"
   alias ls='ls -G --color=auto'
   alias ll='ls -l'
   alias la='ls -A'
@@ -21,6 +22,8 @@ if [[ $(command -v bat) ]]; then
   alias .batcat='bat'
 elif [[ $(command -v batcat) ]]; then
   alias .batcat='batcat'
+else
+  echo "FYI bat is not installed https://github.com/sharkdp/bat"
 fi
 
 alias grep='grep --color=auto'
