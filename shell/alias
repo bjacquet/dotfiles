@@ -46,7 +46,11 @@ alias .jrnltodo='jrnl @todo -not @done'
 alias .jrnltodolist='jrnl @todo-list -on today'
 
 # emacs related
-alias .emacs='emacs -l ~/.config/dotemacs/init.el'
+if [[ $(uname -n) == "tama.local" ]]; then
+    alias .emacs='/Applications/Emacs.app/Contents/MacOS/Emacs -l ~/.config/dotemacs/init.el'
+else
+    alias .emacs='emacs -l ~/.config/dotemacs/init.el'
+fi
 
 # MacOS workaround
 if [[ $(uname -n) == "puffin.lan" ]]; then

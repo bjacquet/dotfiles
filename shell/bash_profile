@@ -4,6 +4,15 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+# If you receive a "Last login" message when you open the shell do:
+# touch ~/.hushlogin
+# to suppress it.
+
+# We want to use Bash FTW!
+if [[ $(uname) == "Darwin" ]]; then
+    export BASH_SILENCE_DEPRECATION_WARNING=1
+fi
+
 # If not running interactively, don't do anything
 # case $- in
 #     *i*) ;;
@@ -38,11 +47,21 @@ if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
 fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
-case "$TERM" in
+if [[ $(uname) == "Darwin" ]]; then
+    if [[ $(command -v gdircolors) ]]; then
+	color_prompt=yes;
+	eval "$(gdircolors -b)"
+    else
+	echo "FYI coreutils is not installed (brew)"
+    fi
+else
+    case "$TERM" in
     xterm-color|*-256color)
         color_prompt=yes;
         eval "$(dircolors -b)"
-esac
+    esac
+fi
+
 
 if [ "$color_prompt" = yes ]; then
     # my fancy prompt
@@ -117,8 +136,9 @@ if [[ $(uname -n) == "puffin.lan" ]]; then
 fi
 
 # Because of Homebrew
-if [[ $(uname) == "Darwin" ]] && [[ -d /usr/local/bin ]]; then
-  export PATH="/opt/homebrew/bin:/usr/local/bin:$PATH"
+if [[ $(uname) == "Darwin" ]]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+  export PATH="/opt/homebrew/bin:$PATH"
 fi
 
 # Set environment variables through secrets file
@@ -135,15 +155,20 @@ fi
 
 
 # ASDF
-if [[ $(uname) != "Darwin" ]]; then
-    . $HOME/Applications/asdf/asdf.sh
-    . $HOME/Applications/asdf/completions/asdf.bash
-else
-    . "/opt/homebrew/opt/asdf/etc/bash_completion.d/asdf"
+if [[ $(command -v asdf) ]]; then
+    if [[ $(uname) != "Darwin" ]]; then
+	. $HOME/Applications/asdf/asdf.sh
+	. $HOME/Applications/asdf/completions/asdf.bash
+    else
+	. "/opt/homebrew/opt/asdf/etc/bash_completion.d/asdf"
 
-    export ASDF_DATA_DIR="$HOME/.asdf"
-    export PATH="$ASDF_DATA_DIR/shims:$PATH"
+	export ASDF_DATA_DIR="$HOME/.asdf"
+	export PATH="$ASDF_DATA_DIR/shims:$PATH"
+    fi
+else
+    echo "FYI ASDF is not installed https://asdf-vm.com/"
 fi
+    
 
 # Load Starship https://starship.rs/
 # Installed with `curl -sS https://starship.rs/install.sh | sh`
