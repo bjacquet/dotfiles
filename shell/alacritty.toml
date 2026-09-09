@@ -1,0 +1,10 @@
+# Try to follow the same order as presented in https://alacritty.org/config-alacritty.html
+# This configuration is for tama.
+
+## FONT
+
+size = 13
+
+## TERMINAL
+
+shell = { program = "/opt/homebrew/bin/bash", args = ["-l"] }
