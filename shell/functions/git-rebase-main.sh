@@ -1,0 +1,17 @@
+#!/bin/bash
+# -*- mode: shell-script -*-
+
+# Get the latest changes on main pulled down locally
+# and then rebase them into/onto the current branch
+.git_rebase_main() {
+  if [[ -n "$1" ]]; then
+    branch="$1"
+  else
+    branch="main"
+  fi
+  CURRENT=$(git rev-parse --abbrev-ref HEAD) # figures out the current branch
+  git checkout "$branch"
+  git pull
+  git checkout "$CURRENT"
+  git rebase "$branch"
+}
