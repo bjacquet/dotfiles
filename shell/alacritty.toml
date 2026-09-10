@@ -1,10 +1,34 @@
 # Try to follow the same order as presented in https://alacritty.org/config-alacritty.html
-# This configuration is for tama.
+#
+# When configuring a new machine do
+# ln -s ~/.config/dotfiles/shell/alacritty.toml ~/.config/alacritty/alacritty.toml
 
-## FONT
+[window]
 
-size = 13
+padding = { x = 11 }
 
-## TERMINAL
+option_as_alt = "Both"
+
+
+[font]
+
+normal.family = "Anonymous Pro"
+
+size = 15
+
+
+[cursor]
+
+style = { blinking = "Always" }
+
+
+[terminal]
 
 shell = { program = "/opt/homebrew/bin/bash", args = ["-l"] }
+
+
+[keyboard]
+
+bindings = [
+ { key = "N", mods = "Command", action = "SpawnNewInstance" }
+]
