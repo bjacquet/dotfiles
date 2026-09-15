@@ -30,5 +30,6 @@ shell = { program = "/opt/homebrew/bin/bash", args = ["-l"] }
 [keyboard]
 
 bindings = [
- { key = "N", mods = "Command", action = "SpawnNewInstance" }
+ { key = "N", mods = "Command", action = "SpawnNewInstance" },
+ { key = "Return", mods = "Shift", chars = "\u001B\r" }
 ]
