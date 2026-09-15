@@ -220,6 +220,7 @@ enter_accept = true
 ## Set commands where we should consider the subcommand for statistics. Eg, kubectl get vs just kubectl
 common_subcommands = [
   "apt",
+  "brew",
   "cargo",
   "cd",
   "composer",
@@ -230,6 +231,7 @@ common_subcommands = [
   "ip",
   "kubectl",
   "make",
+  "mise",
   "mix",
   "nix",
   "nmcli",
