@@ -5,7 +5,7 @@
 
 [window]
 
-padding = { x = 11 }
+padding = { x = 11, y = 1 }
 
 option_as_alt = "Both"
 
