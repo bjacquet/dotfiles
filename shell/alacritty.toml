@@ -7,14 +7,14 @@
 
 padding = { x = 11, y = 1 }
 
-option_as_alt = "Both"
+option_as_alt = "OnlyRight"
 
 
 [font]
 
 normal.family = "Anonymous Pro"
 
-size = 15
+size = 16
 
 
 [cursor]
