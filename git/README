@@ -1,0 +1,2 @@
+ln -s ~/.config/dotfiles/git/gitconfig ~/.config/git/config
+ln -s ~/.config/dotfiles/git/gitattributes ~/.config/git/attributes
