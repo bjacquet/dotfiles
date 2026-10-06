@@ -42,8 +42,8 @@ alias xterm='xterm -r'
 }
 
 # jrnl.sh shortcuts
+alias .jrnltoday='jrnl -today'
 alias .jrnltodo='jrnl @todo -not @done'
-alias .jrnltodolist='jrnl @todo-list -on today'
 
 # emacs related
 if [[ $(uname -n) == "tama.local" ]]; then
@@ -61,6 +61,10 @@ fi
 # git related
 alias .git_hard_reset_master='git fetch origin master:master && git checkout master && git reset --hard origin/master'
 
-alias .date='date --rfc-email --utc'
+if [[ $(uname) == "Darwin" ]]; then
+    alias .date='date -Ru'
+else
+    alias .date='date --rfc-email --utc'
+fi
 
 alias .onefetch='onefetch --no-title --no-color-palette --number-of-authors 5 --number-of-file-churns 5'
