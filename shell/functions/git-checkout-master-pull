@@ -3,5 +3,5 @@
 
 # Tries to checkout master and pulls from origin.
 .git_checkout_master_pull() {
-    git checkout master && git pull
+    git checkout master && git pull --ff-only
 }
