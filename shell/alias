@@ -68,3 +68,5 @@ else
 fi
 
 alias .onefetch='onefetch --no-title --no-color-palette --number-of-authors 5 --number-of-file-churns 5'
+
+alias .standup_report='.jrnltoday 2>/dev/null | ruby ~/.config/dotfiles/shell/functions/standup_report.rb | pbcopy'
