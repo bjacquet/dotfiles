@@ -292,7 +292,8 @@ window-minimum-width: 0
 floating: [
     "com.apple.systempreferences",
     "com.docker.docker",
-    "com.grammarly.ProjectLlama"
+    "com.grammarly.ProjectLlama",
+    "com.tcltk.wish"
 ]
 
 # Boolean flag determining behavior of the floating list. true if the
@@ -376,6 +377,9 @@ screen-padding-bottom: 0
 # true to maintain layout state across application executions (default true).
 restore-layouts-on-launch: true
 
+# true to start Amethyst with tiling disabled (default false).
+start-with-tiling-disabled: false
+
 # true to display some optional debug information in the layout HUD (default
 # false).
-debug-layout-info: false
+debug-layout-info: true
